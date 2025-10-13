@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Kelompok 3 - Ekonomi</title>
+    <style>
+        /* CSS asli dari Anda tetap dipertahankan untuk layout */
+        body {
+            font-family: sans-serif;
+            display: flex; /* Mengaktifkan Flexbox untuk layout kolom */
+        }
+
+        /* Styling untuk navigasi/daftar isi di kiri */
+        .sidebar {
+            width: 250px; /* Sedikit dilebarkan agar muat */
+            padding-right: 20px;
+            border-right: 1px solid #ccc;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #0645ad;
+        }
+
+        /* Styling untuk konten utama di kanan */
+        /* .main-content {
+            flex-grow: 1;
+            padding-left: 20px;
+        } */
+
+        .gambar-kanan {
+            float: right;
+            width: 200px;
+            height: auto;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        hr {
+            padding: 1px;
+            background-color: black;
+        }
+        h2  {
+            font-family: 'times new roman', cursive;
+            background-color:white;
+            padding: 5px;
+            text-align: center;
+            font-weight: bold;
+            /* Animasi untuk tulisan berjalan */
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+        h2 p {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 12s linear infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+       <h3 style="padding-inline: 20px;"><img src= "KUANTUMIKALOGO.png" width="100"></h3>
+        <ul>
+            <li><a href="index.html">Beranda</a></li><br>
+            <li><a href="Edukasi_Dasar.html">Edukasi Dasar</a></li><br>
+            <li><a href="Berita_Terkini.html">Berita Terkini</a></li><br>
+            <li><a href="tips-investasi.html">Tips Investasi & Bisnis</a></li><br>
+            <li><a href="fakta-menarik.html">Fakta Menarik Ekonomi</a></li><br>
+            <li><a href="kontak.html">Kontak & Konsultasi</a></li>
+        </ul>
+    </nav>
+
+   <main class="main-content">
+        <h1 style="margin-left: 20px;">PERKEMBANGAN KURS</h1>
+        <hr style="margin-left: 20px;">
+        
+        <p style="margin-left: 20px;">
+            <b>Kurs USD ke Rupiah: Tinjauan, Faktor, dan Dampaknya</b>
+        </p>
+        <p style="margin-left: 20px;">
+            Kurs USD ke Rupiah adalah nilai tukar yang menunjukkan berapa Rupiah yang dibutuhkan untuk satu Dolar Amerika Serikat (USD). Misalnya, jika kurs USD/IDR berada di angka Rp16.583,75, maka 1 USD setara dengan Rp16.583,75. Kurs ini memiliki peran penting dalam perekonomian Indonesia, memengaruhi perdagangan, investasi, hingga harga barang sehari-hari.
+        </p>
+        <img src="kursdollar.png" alt="Grafik Kurs USD ke Rupiah" width="600" style="margin-left: 5px;">
+        <p style="margin-left: 20px;">
+            Berdasarkan data terkini per Oktober 2025, kurs USD/IDR bergerak di kisaran Rp16.000–Rp16.583,75, dipengaruhi oleh dinamika global dan domestik. Beberapa faktor utama yang memengaruhi fluktuasi kurs meliputi:
+        </p>
+        <ul style="margin-left: 40px;">
+            <li><b>Kebijakan Moneter</b>: Perubahan suku bunga oleh Federal Reserve (AS) atau Bank Indonesia. </li><br>
+            <li><b>Kondisi Ekonomi Global</b>: Harga komoditas seperti minyak dan stabilitas ekonomi AS.</li><br>
+            <li><b>Faktor Domestik</b>: Neraca perdagangan, tingkat inflasi, dan stabilitas politik di Indonesia.</li>
+        </ul>
+        <br>
+       <p style="margin-left: 20px;">
+          <i><b>
+            Jika Anda Ingin Melihat Perkembangan Kurs Secara Real-Time, Anda Bisa Mengunjungi Situs Berikut :
+            </b>
+          </i>
+        
+          <a href="https://www.bi.go.id/id/statistik/informasi-kurs/transaksi-bi/default.aspx">Bank Indonesia - Informasi Kurs</a>
+        </p>
+    </main>
+    
+
+</body>
+</html>
