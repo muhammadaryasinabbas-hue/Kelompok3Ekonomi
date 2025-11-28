@@ -162,14 +162,33 @@ nav a:hover {
 }
 
 /* Footer */
-footer {
-    background-color: #333;
+footer  {
+    background-color: #060b22;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
     bottom: 0;
     width: 100%;
 }
+footer a:link {
+    color: rgb(14, 238, 74); /* Warna link saat belum dikunjungi */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+footer a:visited {
+    color: lightgreen; /* Warna link saat sudah dikunjungi */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white; /* Warna link saat mouse diarahkan ke atasnya */
+    text-decoration: underline; /* Menambahkan garis bawah saat di-hover */
+}
+
+footer a:active {
+    color: yellow; /* Warna link saat sedang diklik */
+}
+
 
 /* Responsive Layout */
 @media (max-width: 768px) {
