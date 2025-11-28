@@ -1,63 +1,140 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelompok 3 - Ekonomi</title>
+<meta charset="utf-8" />
+<title>Live Dashboard Simple</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+  body { background:#111; color:#fff; font-family:sans-serif; padding:20px; text-align:center; }
+  
+  .wrap {
+    max-width: 800px;   /* AGAR TIDAK STRETCH DI LAYAR LEBAR */
+    margin:auto;
+  }
+
+  .card {
+    background:#1a1f25; padding:15px; border-radius:10px; margin-bottom:20px;
+    box-shadow:0 0 10px #0006;
+  }
+
+  canvas { width:100% !important; height:150px !important; }
+  .meta { font-size:13px; color:#bbb; margin-top:8px; }
+</style>
 </head>
 
 <body>
-
-   <table border="0" cellpadding="0" cellspacing="0" width="100%">
-     <tr>
-  
-     <td width="20%" align="left">
-      <img src="KUANTUMIKALOGO.png" alt="Logo Kuantomika" width="100">
-     </td>
-    
-     <td width="60%" align="center">
-      <h2>KURS RUPIAH, SAHAM, DAN CRYPTO</h2>
-     </td>
-    
-     <td width="20%">
-      </td>
-    
-     </tr>
-    </table>
-<hr>
-<br>
-<center>
-<nav>
-        | <a href="index.html">Beranda</a> |
-        <a href="Daftar_isi.html">Daftar Isi</a> |
-        <a href="Tips&Trick.html">Tips & Trik</a> |
-        <a href="Berita_Terkini.html">Berita Terkini</a> |
-        <a href="ContactUs.html">Contact Us</a> |
+    <header>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td width="20%" align="left">
+                    <img src="KUANTUMIKALOGO.png" alt="Logo Kuantumika" width="100">
+                </td>
+                <td width="60%" align="center">
+                    <h2>TERTARIK DENGAN DUNIA INVESTASI???</h2>
+                </td>
+                <td width="20%"></td>
+            </tr>
+        </table>
+    </header>
+    <hr>
+    <nav>
+        <center>
+            | <a href="index.html">Beranda</a> |
+            <a href="Daftar_isi.html">Daftar Isi</a> |
+            <a href="Tips&Trick.html">Tips & Trik</a> |
+            <a href="Berita_Terkini.html">Berita Terkini</a> |
+            <a href="ContactUs.html">Contact Us</a> |
+        </center>
     </nav>
-</center>
-<br>
-<hr>
-        <p>
-            Dalam beberapa tahun terakhir, pasar keuangan global mengalami dinamika yang sangat cepat. Fluktuasi nilai tukar mata uang asing, pergerakan harga aset digital seperti Bitcoin atau Ethereum, serta pergerakan saham di berbagai sektor menuntut perhatian lebih bagi investor dan analis. Statistik yang akan disajikan berikut ini bertujuan untuk memberikan gambaran nyata mengenai tren terkini, perubahan harga, dan volume transaksi di pasar global maupun domestik. Dengan memahami data ini, pembaca dapat memperoleh wawasan lebih mendalam untuk pengambilan keputusan investasi atau analisis pasar.
-        </p>
-        <table border="1" cellpadding="10" cellspacing="0" width="100%">
-        <tr>
-            <td align="center" width="33%">
-                <strong>Cryptocurrency</strong><br />
-                <img src="Crypto.png" alt="Cryptocurrency" width="500px" height="350px"/>
-            </td>
-            <td align="center" width="33%">
-                <strong>Saham Indonesia</strong><br />
-                 <img src="saham.png" alt="saham" width="450px" height="350px"/>
-            </td>
-            <td align="center" width="33%">
-                <strong>Kurs Rupiah</strong><br />
-                 <video src="1013.mp4" alt="kurs" width="500px" height="350px"autoplay muted loop>
-            </td>
-        </tr>
-    </table>
-    </main>
-    
+<div class="wrap">
 
+<h2>Live Market</h2>
+
+<div class="card">
+  <h3>IDR / USD</h3>
+  <canvas id="c1"></canvas>
+  <div class="meta" id="m1"></div>
+</div>
+
+<div class="card">
+  <h3>JCI Index</h3>
+  <canvas id="c2"></canvas>
+  <div class="meta" id="m2"></div>
+</div>
+
+<div class="card">
+  <h3>Bitcoin BTC/IDR</h3>
+  <canvas id="c3"></canvas>
+  <div class="meta" id="m3"></div>
+</div>
+
+</div>
+
+<script>
+function createChart(id, color) {
+  return new Chart(document.getElementById(id), {
+    type: "line",
+    data: { labels: [], datasets: [{
+      data: [], borderColor: color, backgroundColor: color+"33",
+      fill: true, tension: 0.3
+    }]},
+    options: { plugins:{legend:{display:false}}, scales:{
+      x:{ticks:{color:"#aaa"}}, y:{ticks:{color:"#aaa"}}
+    }}
+  });
+}
+
+// Chart
+let c1 = createChart("c1", "#ff6b6b");
+let c2 = createChart("c2", "#2dd4bf");
+let c3 = createChart("c3", "#fca311");
+
+// Dummy awal (lebih realistis)
+let v1=15500, v2=6900, v3=110_000_000;
+
+// update sederhana
+function pushData(chart, meta, val, range){
+  let t = new Date().toLocaleTimeString();
+  val += (Math.random() - 0.5) * range;
+
+  chart.data.labels.push(t);
+  chart.data.datasets[0].data.push(val);
+
+  if(chart.data.labels.length > 20){
+    chart.data.labels.shift();
+    chart.data.datasets[0].data.shift();
+  }
+
+  chart.update();
+
+  let d = chart.data.datasets[0].data;
+  document.getElementById(meta).innerText =
+    `Open ${d[0].toFixed(2)} | High ${Math.max(...d).toFixed(2)} | Low ${Math.min(...d).toFixed(2)}`;
+
+  return val;
+}
+
+setInterval(()=>{
+  v1 = pushData(c1,"m1",v1,20);
+  v2 = pushData(c2,"m2",v2,30);
+  v3 = pushData(c3,"m3",v3,1_000_000);
+},1500);
+</script>
+
+<footer>
+        <center>
+            <table width="70%" cellpadding="10">
+                <tr>
+                    <td width="50%" align="center">
+                        <a href="Daftar_isi.html">&larr; Daftar Isi</a>
+                    </td>
+                    <td width="50%" align="center">
+                        <a href="Tips&Trick.html">Tips & Trick&rarr;</a>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </footer>
 </body>
 </html>
