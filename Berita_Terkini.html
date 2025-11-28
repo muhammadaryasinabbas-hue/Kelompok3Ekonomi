@@ -1,76 +1,149 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelompok 3 - Ekonomi</title>
+<meta charset="utf-8" />
+<title>Berita Ekonomi Indonesia</title>
+
+<style>
+    body {
+        background: #0f1216;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 25px;
+        font-weight: 600;
+    }
+
+    .news-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        background: #1b1f24;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
+        transition: transform 0.25s, box-shadow 0.2s;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 18px rgba(255,255,255,0.15);
+    }
+
+    .card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .content h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+    }
+
+    .content p {
+        font-size: 14px;
+        opacity: 0.85;
+        line-height: 1.4;
+    }
+</style>
 </head>
+
 <body>
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-     <tr>
-  
-     <td width="20%" align="left">
-      <img src="KUANTUMIKALOGO.png" alt="Logo Kuantomika" width="100">
-     </td>
-    
-     <td width="60%" align="center">
-      <h2>BERITA TERKINI</h2>
-     </td>
-    
-     <td width="20%">
-      </td>
-    
-     </tr>
-    </table>
-<hr>
-<br>
-<center>
-<nav>
-       | <a href="index.html">Beranda</a> |
-        <a href="Daftar_isi.html">Daftar isi</a> |
-        <a href="Kurs-Saham.html">Kurs Rupiah, Saham, dan Crypto</a> |
-        <a href="Tips&Trick.html">Tips & Trik</a> |
-        <a href="ContactUs.html">Contact Us</a> |
-    </nav>
-</center>
-<br>
-<hr>
 
-    <main class="main-content">
+<h1>Berita Ekonomi, Saham, & Kripto Indonesia</h1>
 
-         <a href="https://www.bitgetapp.com/id/price/bitcoin/price-prediction"><img src="Bitcoin.png" width="200px"><br>Prediksi Harga Bitcoin, Prediksi Harga BTC, Prediksi Harga 2025.</a>
-         <br>
-         <br>
+<div class="news-container">
 
-        <a href="https://www.bitgetapp.com/id/price/ethereum/price-prediction"><img src="Ethereum.png" width="200px"><br>Prediksi Harga Ethereum, Prediksi Harga ETH, Prediksi Harga 2025.</a>
-        <br>
-        <br>
+    <!-- BERITA 1 -->
+    <a class="card" href="https://www.antaranews.com" target="_blank">
+        <img src="https://img.antaranews.com/cache/1200x800/2024/11/30/BI.jpg">
+        <div class="content">
+            <h3>Rupiah Menguat Dipengaruhi Sentimen Global</h3>
+            <p>Rupiah menguat terhadap dolar AS setelah data inflasi AS turun dan investor kembali masuk ke pasar obligasi.</p>
+        </div>
+    </a>
 
-        <a href="https://www.cnbcindonesia.com/tech/20250929150806-37-671169/cara-belajar-investasi-crypto-yang-menguntungkan-untuk-pemula"><img src="BelajarInvest.png" width="200"><br>Cara Belajar Investasi Crypto yang Menguntungkan untuk Pemula.</a>
-        <br>
-        <br>
+    <!-- BERITA 2 -->
+    <a class="card" href="https://www.kompas.com" target="_blank">
+        <img src="https://asset.kompas.com/crops/saham.jpg">
+        <div class="content">
+            <h3>IHSG Menguat Dipimpin Sektor Perbankan</h3>
+            <p>IHSG mengalami kenaikan didorong sentimen positif laporan keuangan bank-bank besar Indonesia.</p>
+        </div>
+    </a>
 
-        <a href="https://indodax.com/academy/harga-bitcoin-akhir-2025/"><img src="HargaBitcoin.jpg" width="200"><br>Harga Bitcoin Diprediksi Tembus $160 Ribu di Akhir 2025.</a>
-        <br>
-       <br>
+    <!-- BERITA 3 -->
+    <a class="card" href="https://www.detik.com" target="_blank">
+        <img src="https://awsimages.detik.net.id/bitcoin.jpg">
+        <div class="content">
+            <h3>Bitcoin Menguat Seiring Naiknya Aktivitas Kripto</h3>
+            <p>Bitcoin naik setelah volume perdagangan kripto Indonesia meningkat dan pengawasan Bappebti diperkuat.</p>
+        </div>
+    </a>
 
-       <a href="https://investortrust.id/market/71271/ini-dia-prediksi-harga-bitcoin-ethereum-xrp-di-juli-2025"><img src="bapakbitcoin.jpg" width="200"><br>Ini Dia Prediksi Harga Bitcoin, Ethereum & XRP di Juli 2025.</a>
-       <br>
-    </main>
-    <hr>
-<footer>
-    <center>
-        <table width="70%" cellpadding="10">
-            <tr>
-                <td width="50%" align="center">
-                    <a href="Tips&Trick.html">&larr; Tips & Trik</a>
-                </td>
-                <td width="50%" align="center">
-                    <a href="ContactUs.html">Contact Us &rarr;</a>
-                </td>
-            </tr>
-        </table>
-    </center>
-</footer>
+    <!-- BERITA 4 -->
+    <a class="card" href="https://www.kompas.com" target="_blank">
+        <img src="https://asset.kompas.com/crops/investasi.jpg">
+        <div class="content">
+            <h3>Investasi Asing Masuk ke Sektor Teknologi</h3>
+            <p>Investor global melirik startup Indonesia setelah proyeksi pertumbuhan ekonomi nasional meningkat.</p>
+        </div>
+    </a>
+
+    <!-- BERITA 5 -->
+    <a class="card" href="https://www.liputan6.com" target="_blank">
+        <img src="https://cdn0-production-images-kly.akamaized.net/emas.jpg">
+        <div class="content">
+            <h3>Harga Emas Antam Naik Imbas Pelemahan Dolar</h3>
+            <p>Harga emas domestik naik mengikuti tren global setelah dolar AS mengalami tekanan.</p>
+        </div>
+    </a>
+
+    <!-- BERITA 6 -->
+    <a class="card" href="https://www.tempo.co" target="_blank">
+        <img src="https://statik.tempo.co/data/energi.jpg">
+        <div class="content">
+            <h3>Harga Minyak Dunia Turun, Indonesia Diuntungkan</h3>
+            <p>Turunnya harga minyak dunia menekan biaya impor dan berpotensi memperbaiki neraca perdagangan.</p>
+        </div>
+    </a>
+
+    <!-- BERITA 7 (BARU) -->
+    <a class="card" href="https://www.cnbcindonesia.com" target="_blank">
+        <img src="https://awsimages.detik.net.id/cnbc.jpg">
+        <div class="content">
+            <h3>Bank Indonesia Prediksi Ekonomi Tumbuh Lebih Cepat</h3>
+            <p>BI memperkirakan pertumbuhan ekonomi RI akan lebih kuat didorong konsumsi rumah tangga dan investasi.</p>
+        </div>
+    </a>
+
+    <!-- BERITA 8 (BARU) -->
+    <a class="card" href="https://www.bisnis.com" target="_blank">
+        <img src="https://images.bisnis.com/economy.jpg">
+        <div class="content">
+            <h3>Penjualan Kendaraan Listrik di Indonesia Meningkat</h3>
+            <p>Peningkatan minat terhadap kendaraan listrik mendorong pasar otomotif bergerak ke energi yang lebih ramah lingkungan.</p>
+        </div>
+    </a>
+
+</div>
+
 </body>
 </html>
