@@ -1,0 +1,94 @@
+body {
+    background: #111;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 90px;
+}
+
+/* Navigation */
+.nav {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.nav a {
+    color: #2dd4bf;
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: #38e8d2;
+}
+
+/* Card style (sama seperti tema lainnya) */
+.card {
+    background: #1a1f25;
+    padding: 18px;
+    border-radius: 12px;
+    margin: 25px 0;
+    box-shadow: 0 0 10px #000;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Grid gambar rapi */
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+}
+
+/* Marquee smooth */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scroll 22s linear infinite;
+    font-style: italic;
+    color: #ccc;
+}
+.marquee span {
+    padding: 0 30px;
+}
+@keyframes scroll {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+/* Footer */
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.footer-nav a {
+    color: #f59e0b;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    color: #ffb73a;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .header { flex-direction: column; }
+}
