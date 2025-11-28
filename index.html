@@ -5,41 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelompok 3 - Ekonomi</title>
 </head>
-<body>
+
+<body style="background-color: black; color: white; font-family: Arial, sans-serif;">
+
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
-     <tr>
-  
-     <td width="20%" align="left">
-      <img src="KUANTUMIKALOGO.png" alt="Logo Kuantomika" width="100">
-     </td>
-    
-     <td width="60%" align="center">
-      <h1>Selamat Datang Di KUANTUMIKA</h1>
-     </td>
-    
-     <td width="20%">
-      </td>
-    
-     </tr>
+        <tr>
+            <td width="20%" align="left">
+                <img src="KUANTUMIKALOGO.png" alt="Logo Kuantomika" width="100">
+            </td>
+
+            <td width="60%" align="center">
+                <h1>Selamat Datang Di KUANTUMIKA</h1>
+            </td>
+
+            <td width="20%"></td>
+        </tr>
     </table>
+
 <hr>
 <center><h2>Halo para calon investor dan pembelajar finansial</h2></center>
 <hr>
-        <p>
-          Kami memahami bahwa memulai sesuatu yang baru bisa terasa menakutkan. Oleh karena itu, di sini, kami tidak menjanjikan kekayaan instan. Yang kami tawarkan adalah pengetahuan, strategi, dan pemahaman yang kuat. Situs ini adalah tempat Anda untuk belajar, bertanya, dan membangun fondasi yang kokoh sebelum Anda benar-benar terjun ke dalam dunia investasi. Apakah Anda siap untuk memulai perjalanan investasi yang cerdas dan menguntungkan? Situs web ini adalah panduan pribadi Anda untuk menjelajahi dua dunia investasi yang paling dinamis saat ini: aset kripto dan saham.
 
-Kami percaya bahwa setiap orang berhak memiliki kendali atas masa depan finansialnya. Di sini, kami akan menyajikan informasi dasar yang esensial, mulai dari apa itu saham dan kripto, bagaimana cara memulai, hingga tips-tips penting untuk meminimalkan risiko.
+<!-- CARD PARAGRAF + BUTTON -->
+<div style="
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    color: black;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(255,255,255,0.1);
+    text-align: justify;
+">
 
-Situs ini didesain secara sederhana agar mudah dipahami oleh siapa pun, bahkan jika Anda seorang pemula total. Mari kita bersama-sama membangun pemahaman yang kuat dan strategi investasi yang tepat untuk mencapai tujuan finansial Anda.
+    <p style="font-size: 18px; line-height: 1.7;">
+        Kami memahami bahwa memulai sesuatu yang baru bisa terasa menakutkan. Oleh karena itu, di sini,
+        kami tidak menjanjikan kekayaan instan. Yang kami tawarkan adalah pengetahuan, strategi, dan pemahaman
+        yang kuat. Situs ini adalah tempat Anda untuk belajar, bertanya, dan membangun fondasi yang kokoh
+        sebelum Anda benar-benar terjun ke dalam dunia investasi. Apakah Anda siap untuk memulai perjalanan
+        investasi yang cerdas dan menguntungkan? Situs web ini adalah panduan pribadi Anda untuk menjelajahi
+        dua dunia investasi yang paling dinamis saat ini: aset kripto dan saham.<br><br>
 
-Selamat belajar dan selamat berinvestasi!</p>
-<center>
-        <a href="Daftar_isi.html"><h1>Selamat Menjelajah !</h1></a>
-</center>
-        <center>
-        <video src="DollaDolla.mp4" width="1500" autoplay muted loop>
-        </video>
-        </center>
-        </main>
+        Kami percaya bahwa setiap orang berhak memiliki kendali atas masa depan finansialnya. Di sini, kami
+        akan menyajikan informasi dasar yang esensial, mulai dari apa itu saham dan kripto, bagaimana cara memulai,
+        hingga tips-tips penting untuk meminimalkan risiko. Situs ini didesain secara sederhana agar mudah dipahami
+        oleh siapa pun, bahkan jika Anda seorang pemula total. Mari kita bersama-sama membangun pemahaman yang kuat
+        dan strategi investasi yang tepat untuk mencapai tujuan finansial Anda.<br><br>
+
+        Selamat belajar dan selamat berinvestasi!
+    </p>
+
+    <center>
+        <button id="btnMulai"
+            style="
+            margin-top: 30px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 15px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: 0.3s;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+            ">
+            <a href="Daftar_isi.html">SELAMAT MENJELAJAH! !</a>
+            <span style="font-size: 26px; font-weight: bold;">→</span>
+        </button>
+    </center>
+
+</div>
+
+<script>
+    const btn = document.getElementById("btnMulai");
+
+    btn.addEventListener("mouseover", function () {
+        btn.style.transform = "translateY(-4px)";
+        btn.style.boxShadow = "0 10px 28px rgba(255,255,255,0.4)";
+    });
+
+    btn.addEventListener("mouseout", function () {
+        btn.style.transform = "translateY(0)";
+        btn.style.boxShadow = "0 6px 18px rgba(0,0,0,0.5)";
+    });
+</script>
+
 </body>
 </html>
