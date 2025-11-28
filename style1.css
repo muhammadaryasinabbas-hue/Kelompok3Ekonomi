@@ -5,7 +5,6 @@ body {
     padding: 20px;
 }
 
-/* Header */
 .header {
     display: flex;
     align-items: center;
@@ -17,7 +16,6 @@ body {
     width: 90px;
 }
 
-/* Navigation */
 .nav {
     text-align: center;
     margin: 15px 0;
@@ -34,7 +32,6 @@ body {
     color: #38e8d2;
 }
 
-/* Card style (sama seperti tema lainnya) */
 .card {
     background: #1a1f25;
     padding: 18px;
@@ -48,7 +45,6 @@ body {
     border-radius: 10px;
 }
 
-/* Grid gambar rapi */
 .img-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -56,7 +52,6 @@ body {
     margin-top: 12px;
 }
 
-/* Marquee smooth */
 .marquee {
     overflow: hidden;
     white-space: nowrap;
@@ -72,7 +67,6 @@ body {
     to { transform: translateX(-100%); }
 }
 
-/* Footer */
 .footer-nav {
     display: flex;
     justify-content: space-between;
@@ -88,7 +82,6 @@ body {
     color: #ffb73a;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
     .header { flex-direction: column; }
 }
