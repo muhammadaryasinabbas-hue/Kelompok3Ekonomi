@@ -163,22 +163,22 @@ footer {
     width: 100%;
 }
 footer a:link {
-    color: rgb(14, 238, 74); /* Warna link saat belum dikunjungi */
-    text-decoration: none; /* Menghilangkan garis bawah */
+    color: rgb(14, 238, 74);
+    text-decoration: none; 
 }
 
 footer a:visited {
-    color: lightgreen; /* Warna link saat sudah dikunjungi */
+    color: lightgreen; 
     text-decoration: none;
 }
 
 footer a:hover {
-    color: white; /* Warna link saat mouse diarahkan ke atasnya */
-    text-decoration: underline; /* Menambahkan garis bawah saat di-hover */
+    color: white; 
+    text-decoration: underline; 
 }
 
 footer a:active {
-    color: yellow; /* Warna link saat sedang diklik */
+    color: yellow; 
 }
 
 
