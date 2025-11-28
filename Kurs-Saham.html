@@ -9,7 +9,7 @@
   body { background:#111; color:#fff; font-family:sans-serif; padding:20px; text-align:center; }
   
   .wrap {
-    max-width: 800px;   /* AGAR TIDAK STRETCH DI LAYAR LEBAR */
+    max-width: 800px;   
     margin:auto;
   }
 
@@ -31,7 +31,7 @@
                     <img src="KUANTUMIKALOGO.png" alt="Logo Kuantumika" width="100">
                 </td>
                 <td width="60%" align="center">
-                    <h2>TERTARIK DENGAN DUNIA INVESTASI???</h2>
+                    <h2>Live Market</h2>
                 </td>
                 <td width="20%"></td>
             </tr>
@@ -47,10 +47,8 @@
             <a href="ContactUs.html">Contact Us</a> |
         </center>
     </nav>
+    <hr>
 <div class="wrap">
-
-<h2>Live Market</h2>
-
 <div class="card">
   <h3>IDR / USD</h3>
   <canvas id="c1"></canvas>
@@ -85,15 +83,13 @@ function createChart(id, color) {
   });
 }
 
-// Chart
+
 let c1 = createChart("c1", "#ff6b6b");
 let c2 = createChart("c2", "#2dd4bf");
 let c3 = createChart("c3", "#fca311");
 
-// Dummy awal (lebih realistis)
 let v1=15500, v2=6900, v3=110_000_000;
 
-// update sederhana
 function pushData(chart, meta, val, range){
   let t = new Date().toLocaleTimeString();
   val += (Math.random() - 0.5) * range;
@@ -121,7 +117,7 @@ setInterval(()=>{
   v3 = pushData(c3,"m3",v3,1_000_000);
 },1500);
 </script>
-
+<hr>
 <footer>
         <center>
             <table width="70%" cellpadding="10">
@@ -136,5 +132,6 @@ setInterval(()=>{
             </table>
         </center>
     </footer>
+<hr>
 </body>
 </html>
