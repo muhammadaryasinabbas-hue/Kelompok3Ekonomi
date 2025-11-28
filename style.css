@@ -173,7 +173,7 @@ footer a:visited {
 }
 
 footer a:hover {
-    color: white; 
+    color: rgb(193, 16, 16); 
     text-decoration: underline; 
 }
 
