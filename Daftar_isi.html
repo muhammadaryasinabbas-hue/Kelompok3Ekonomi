@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Isi</title>
     <style>
-        /* Reset default styles */
         body, h1, h2, h3, p, ul, li {
             margin: 0;
             padding: 0;
@@ -18,16 +17,16 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background-color: #000; /* Warna latar belakang hitam */
-            color: #fff; /* Warna teks putih agar terlihat di latar belakang hitam */
+            background-color: #000; 
+            color: #fff; 
             text-align: center;
             padding: 20px;
         }
 
         h1 {
-            color: #FFD700; /* Warna emas */
+            color: #FFD700; 
             margin-bottom: 20px;
-            font-size: 2.5em; /* Ukuran font lebih besar */
+            font-size: 2.5em; 
         }
 
         hr {
@@ -36,55 +35,54 @@
         }
 
         marquee {
-            color: #FFD700; /* Warna emas */
-            font-size: 1.2em; /* Ukuran font lebih besar */
+            color: #FFD700;
+            font-size: 1.2em; 
         }
 
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px; /* Gap lebih besar */
+            gap: 30px; 
             margin-top: 30px;
         }
 
         .card {
-            background-color: #333; /* Warna card */
-            border-radius: 20px; /* Border radius lebih besar */
-            padding: 30px; /* Padding lebih besar */
-            width: calc(33.33% - 30px); /* Lebar card agar 1 baris 3 card */
+            background-color: #333; 
+            border-radius: 20px; 
+            padding: 30px; 
+            width: calc(33.33% - 30px); 
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease; /* Efek transisi */
-            box-sizing: border-box; /* Agar padding tidak mempengaruhi lebar */
-            font-size: 1.9em; /* Ukuran font lebih besar */
+            transition: background-color 0.3s ease; 
+            box-sizing: border-box; 
+            font-size: 1.9em; 
         }
 
         .card a {
             text-decoration: none;
-            color: #fff; /* Warna teks putih agar terlihat di latar belakang hitam */
+            color: #fff;
             font-weight: bold;
             display: block;
         }
 
         .card:hover {
-            background-color: #7952B3; /* Warna card saat dihover (ungu) */
+            background-color: #7952B3; 
         }
         
         .card a:hover {
-            text-decoration: underline; /* Efek garis bawah saat dihover */
+            text-decoration: underline; 
         }
 
-        /* Responsive layout */
         @media (max-width: 768px) {
             .card {
-                width: calc(50% - 30px); /* Lebar card agar 1 baris 2 card di layar kecil */
+                width: calc(50% - 30px); 
             }
         }
 
         @media (max-width: 600px) {
             .card {
-                width: 100%; /* Lebar card agar 1 baris 1 card di layar sangat kecil */
+                width: 100%; 
             }
         }
     </style>
@@ -120,7 +118,7 @@
             <a href="index.html">Beranda</a>
         </div>
         <div class="card">
-            <a href="Kurs-Saham.html">Kurs Rupiah, Saham, dan Crypto</a>
+            <a href="Kurs-Saham.html">Live Market</a>
         </div>
         <div class="card">
             <a href="Tips&Trick.html">Tips & Trik</a>
