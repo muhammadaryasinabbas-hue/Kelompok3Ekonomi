@@ -6,7 +6,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
-  body { background:#111; color:#fff; font-family:sans-serif; padding:20px; text-align:center; }
+  body { background:burlywood; color:#fff; font-family:sans-serif; padding:20px; text-align:center; }
   
   .wrap {
     max-width: 800px;   
@@ -14,7 +14,7 @@
   }
 
   .card {
-    background:#1a1f25; padding:15px; border-radius:10px; margin-bottom:20px;
+    background:rgb(0, 37, 27); padding:15px; border-radius:10px; margin-bottom:20px;
     box-shadow:0 0 10px #0006;
   }
 
@@ -22,24 +22,28 @@
   .meta { font-size:13px; color:#bbb; margin-top:8px; }
 
   header {
-    background-color: #333;
-    color: #fff;
+    background-color: rgb(1, 47, 33);
+    color: burlywood;
     padding: 1rem 0;
     text-align: center;
 }
 
 header h2 {
     margin: 0;
+    font-size:30px
 }
 
+h3 {
+    color: burlywood;
+}
 nav {
-    background-color: #444;
-    color: #fff;
+    background-color: #024732;
+    color: burlywood;
     padding: 0.5rem 0;
 }
 
 nav a {
-    color: #fff;
+    color: burlywood;
     text-decoration: none;
     padding: 0 1rem;
 }
@@ -49,7 +53,7 @@ nav a:hover {
 }
 
 footer {
-    background-color: #725151;
+    background-color: rgb(1, 47, 33);
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -57,22 +61,22 @@ footer {
     width: 100%;
 }
 footer a:link {
-    color: rgb(14, 238, 74);
+    color: burlywood;
     text-decoration: none; 
 }
 
 footer a:visited {
-    color: lightgreen; 
+    color: burlywood; 
     text-decoration: none;
 }
 
 footer a:hover {
-    color: rgb(193, 16, 16); 
+    color: rgb(255, 255, 255); 
     text-decoration: underline; 
 }
 
 footer a:active {
-    color: yellow; 
+    color: #024732; 
 }
 
 </style>
@@ -92,7 +96,6 @@ footer a:active {
             </tr>
         </table>
     </header>
-    <hr>
     <nav>
         <center>
             | <a href="index.html">Beranda</a> |
@@ -102,7 +105,7 @@ footer a:active {
             <a href="ContactUs.html">Contact Us</a> |
         </center>
     </nav>
-    <hr>
+    <br>
 <div class="wrap">
 <div class="card">
   <h3>IDR / USD</h3>
@@ -172,13 +175,12 @@ setInterval(()=>{
   v3 = pushData(c3,"m3",v3,1_000_000);
 },1500);
 </script>
-<hr>
 <footer>
         <center>
             <table width="70%" cellpadding="10">
                 <tr>
                     <td width="50%" align="center">
-                        <a href="Kurs-Saham.html">&larr; live Market</a>
+                        <a href="Kurs-Saham.html">&larr; Live Market</a>
                     </td>
                     <td width="50%" align="center">
                         <a href="Tips&Trick.html">Tips & Trick&rarr;</a>
@@ -187,6 +189,5 @@ setInterval(()=>{
             </table>
         </center>
     </footer>
-<hr>
 </body>
 </html>
