@@ -10,13 +10,13 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #DEB887;
     color: #333;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #012f21;
+    color: #DEB887;
     padding: 1rem 0;
     text-align: center;
 }
@@ -26,13 +26,13 @@ header h2 {
 }
 
 nav {
-    background-color: #444;
+    background-color: #024732;
     color: #fff;
     padding: 0.5rem 0;
 }
 
 nav a {
-    color: #fff;
+    color: #DEB887;
     text-decoration: none;
     padding: 0 1rem;
 }
@@ -155,7 +155,7 @@ nav a:hover {
 }
 
 footer {
-    background-color: #725151;
+    background-color: #012f21;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -163,7 +163,7 @@ footer {
     width: 100%;
 }
 footer a:link {
-    color: rgb(14, 238, 74);
+    color: burlywood;
     text-decoration: none; 
 }
 
@@ -173,12 +173,17 @@ footer a:visited {
 }
 
 footer a:hover {
-    color: rgb(193, 16, 16); 
+    color: rgb(255, 255, 255); 
     text-decoration: underline; 
 }
 
 footer a:active {
-    color: yellow; 
+    color: #024732; 
+}
+
+ul a:link {
+    color: #024732;
+    text-decoration: none; 
 }
 
 
