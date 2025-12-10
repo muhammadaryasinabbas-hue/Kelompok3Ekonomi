@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuantumika</title>
+</head>
+
+<body style="
+    margin:0; 
+    font-family:'Arial', sans-serif;
+    background-color :#DEB887;
+    background-image: url('backgroundpattern.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:#012f21;
+">
+
+<div style="display:flex; width:100%; padding:40px; box-sizing:border-box;">
+
+    <div style="width:65%; padding-right:20px;">
+        <h1 style="font-size:60px; margin:0; font-weight:bold;">
+            Selamat Datang Di <br>
+            <span style="color:#012f21; font-size:60px;">KUANTUMIKA</span>
+        </h1>
+
+        <h2 style="
+            margin-top:20px; 
+            font-weight:bold; 
+            font-size:28px; 
+            border-bottom:3px solid #012f21;
+            display:inline-block;
+        ">
+            Halo Para Calon Investor Dan Pembelajar Finansial
+        </h2>
+
+        <p style="margin-top:25px; font-size:18px; line-height:1.7; text-align:justify;">
+            Kami memahami bahwa memulai sesuatu yang baru bisa terasa menakutkan. Oleh karena itu, di sini,
+            kami tidak menjanjikan kekayaan instan. Yang kami tawarkan adalah pengetahuan, strategi, dan pemahaman
+            yang kuat. Situs ini adalah tempat Anda untuk belajar, bertanya, dan membangun fondasi yang kokoh
+            sebelum Anda benar-benar terjun ke dalam dunia investasi. Apakah Anda siap untuk memulai perjalanan
+            investasi yang cerdas dan menguntungkan? Situs web ini adalah panduan pribadi Anda untuk menjelajahi
+            dunia investasi yang dinamis seperti aset kripto dan saham.
+            <br><br>
+            Kami percaya bahwa setiap orang berhak memiliki kendali atas masa depan finansialnya. Di sini,
+            kami menyajikan informasi dasar esensial, mulai dari apa itu saham dan kripto, cara memulai,
+            hingga tips penting untuk meminimalkan risiko. Situs ini dirancang agar mudah dipahami oleh siapa pun,
+            bahkan pemula.
+            <br><br>
+            Selamat belajar dan selamat berinvestasi!
+        </p>
+
+        <button id="btnMulai"
+            style="
+            margin-top: 30px;
+            background-color: #012f21;
+            color: #DEB887;
+            border: none;
+            padding: 15px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: 0.3s;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.5);">
+            <a style="color :#DEB887;"  href="Daftar_isi.html">SELAMAT MENJELAJAH! !</a>
+            <span style="font-size: 26px; font-weight: bold;">→</span>
+        </button>
+    </div>
+
+    <div style="width:35%; display:flex; flex-direction:column; gap:20px;">
+        <img src="logo.png" style="width:100%;  border-radius:20px; object-fit:contain;">
+        <img src="cv1.jpg" style="width:100%; border-radius:20px; object-fit:cover;">
+        <img src="cv2.jpg" style="width:100%; border-radius:20px; object-fit:cover;">
+    </div>
+</div>
+
+<script>
+    const btn = document.getElementById("btnMulai");
+
+    btn.addEventListener("mouseover", function () {
+        btn.style.transform = "translateY(-4px)";
+        btn.style.boxShadow = "0 10px 28px rgba(255,255,255,0.4)";
+    });
+
+    btn.addEventListener("mouseout", function () {
+        btn.style.transform = "translateY(0)";
+        btn.style.boxShadow = "0 6px 18px rgba(0,0,0,0.5)";
+    });
+</script>
+</body>
+</html>
