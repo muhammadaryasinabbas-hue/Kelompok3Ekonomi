@@ -3,64 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelompok 3 - Ekonomi</title>
+    <title>Kuantumika</title>
+    <style>
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    width: 50vw;
+    height: 100vh;
+}
+
+.column {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card */
+.card {
+    width: 100%;
+    height: 40vh;       /* boleh diganti */
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Clone group untuk infinite smooth */
+.group.clone {
+    position: relative;
+}
+
+/* ---- ANIMASI NORMAL → UP ---- */
+@keyframes scrollUpSmooth {
+    from   { transform: translateY(0); }
+    to { transform: translateY(-100%); }
+}
+
+/* ---- ANIMASI NORMAL → DOWN ---- */
+@keyframes scrollDownSmooth {
+    from   { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+/* Terapkan animasi pada wrapper (bukan group) */
+.wrapper.up {
+    animation: scrollUpSmooth 30s linear infinite;
+}
+
+.wrapper.down {
+    animation: scrollDownSmooth 30s linear infinite;
+}
+
+
+    </style>
 </head>
 
-<body style="background-color: burlywood; color: white; font-family: Arial, sans-serif;">
-
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-        <tr>
-            <td width="20%" align="left">
-                <img src="KUANTUMIKALOGO.png" alt="Logo Kuantomika" width="100">
-            </td>
-
-            <td width="60%" align="center">
-                <h1 style="color: rgb(1, 47, 33);">Selamat Datang Di KUANTUMIKA</h1>
-            </td>
-
-            <td width="20%"></td>
-        </tr>
-    </table>
-
-<hr style="border: 2px solid rgb(1, 47, 33);">
-<center><h2 style="color: rgb(1, 47, 33);">Halo Para Calon Investor Dan Pembelajar Finansial</h2></center>
-<hr style="border: 2px solid rgb(1, 47, 33);">
-
-<!-- CARD PARAGRAF + BUTTON -->
-<div style="
-    max-width: 900px;
-    margin: 40px auto;
-    background-color: rgb(1, 47, 33);
-    color: burlywood;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 6px 25px rgba(255,255,255,0.1);
-    text-align: justify;
+<body style="
+    margin:0; 
+    font-family:'Arial', sans-serif;
+    background-color :#DEB887;
+    background-image: url('newbackground.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:#012f21;
 ">
 
-    <p style="font-size: 18px; line-height: 1.7;">
-        Kami memahami bahwa memulai sesuatu yang baru bisa terasa menakutkan. Oleh karena itu, di sini,
-        kami tidak menjanjikan kekayaan instan. Yang kami tawarkan adalah pengetahuan, strategi, dan pemahaman
-        yang kuat. Situs ini adalah tempat Anda untuk belajar, bertanya, dan membangun fondasi yang kokoh
-        sebelum Anda benar-benar terjun ke dalam dunia investasi. Apakah Anda siap untuk memulai perjalanan
-        investasi yang cerdas dan menguntungkan? Situs web ini adalah panduan pribadi Anda untuk menjelajahi
-        dua dunia investasi yang paling dinamis saat ini: aset kripto dan saham.<br><br>
+<div style="display:flex; width:100%; padding:40px; box-sizing:border-box;">
 
-        Kami percaya bahwa setiap orang berhak memiliki kendali atas masa depan finansialnya. Di sini, kami
-        akan menyajikan informasi dasar yang esensial, mulai dari apa itu saham dan kripto, bagaimana cara memulai,
-        hingga tips-tips penting untuk meminimalkan risiko. Situs ini didesain secara sederhana agar mudah dipahami
-        oleh siapa pun, bahkan jika Anda seorang pemula total. Mari kita bersama-sama membangun pemahaman yang kuat
-        dan strategi investasi yang tepat untuk mencapai tujuan finansial Anda.<br><br>
+    <div style="width:65%; padding-right:20px;">
+        <h1 style="font-size:60px; margin:0; font-weight:bold;">
+            Selamat Datang Di <br>
+            <span style="color:#012f21; font-size:60px;">KUANTUMIKA</span>
+        </h1>
 
-        Selamat belajar dan selamat berinvestasi!
-    </p>
+        <h2 style="
+            margin-top:20px; 
+            font-weight:bold; 
+            font-size:28px; 
+            border-bottom:3px solid #012f21;
+            display:inline-block;
+        ">
+            Halo Para Calon Investor Dan Pembelajar Finansial
+        </h2>
 
-    <center>
+        <p style="margin-top:25px; font-size:18px; line-height:1.7; text-align:justify;">
+            Kami memahami bahwa memulai sesuatu yang baru bisa terasa menakutkan. Oleh karena itu, di sini,
+            kami tidak menjanjikan kekayaan instan. Yang kami tawarkan adalah pengetahuan, strategi, dan pemahaman
+            yang kuat. Situs ini adalah tempat Anda untuk belajar, bertanya, dan membangun fondasi yang kokoh
+            sebelum Anda benar-benar terjun ke dalam dunia investasi. Apakah Anda siap untuk memulai perjalanan
+            investasi yang cerdas dan menguntungkan? Situs web ini adalah panduan pribadi Anda untuk menjelajahi
+            dunia investasi yang dinamis seperti aset kripto dan saham.
+            <br><br>
+            Kami percaya bahwa setiap orang berhak memiliki kendali atas masa depan finansialnya. Di sini,
+            kami menyajikan informasi dasar esensial, mulai dari apa itu saham dan kripto, cara memulai,
+            hingga tips penting untuk meminimalkan risiko. Situs ini dirancang agar mudah dipahami oleh siapa pun,
+            bahkan pemula.
+            <br><br>
+            Selamat belajar dan selamat berinvestasi!
+        </p>
+
         <button id="btnMulai"
             style="
             margin-top: 30px;
-            background-color: burlywood;
-            color: rgb(1, 47, 33);
+            background-color: #012f21;
+            color: #DEB887;
             border: none;
             padding: 15px 40px;
             font-size: 22px;
@@ -72,12 +134,58 @@
             gap: 12px;
             transition: 0.3s;
             box-shadow: 0 6px 18px rgba(0,0,0,0.5);">
-            <a style="color :rgb(1, 47, 33);"  href="Daftar_isi.html">SELAMAT MENJELAJAH! !</a>
+            <a style="color :#DEB887;"  href="Daftar_isi.html">SELAMAT MENJELAJAH! !</a>
             <span style="font-size: 26px; font-weight: bold;">→</span>
         </button>
-    </center>
+    </div>
+
+    <div class="container">
+
+    <!-- Kolom kiri scroll ke bawah -->
+    <div class="column left">
+        <div class="wrapper down">
+            <div class="group">
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="apejelah.jpg"></div>
+            </div>
+
+            <!-- Clone untuk infinite scroll -->
+            <div class="group clone">
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="apejelah.jpg"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Kolom kanan scroll ke atas -->
+    <div class="column right">
+        <div class="wrapper up">
+            <div class="group">
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="apejelah.jpg"></div>
+            </div>
+
+            <!-- Clone untuk infinite scroll -->
+            <div class="group clone">
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="apejelah.jpg"></div>
+            </div>
+        </div>
+    </div>
 
 </div>
+
+
+
 
 <script>
     const btn = document.getElementById("btnMulai");
@@ -92,6 +200,5 @@
         btn.style.boxShadow = "0 6px 18px rgba(0,0,0,0.5)";
     });
 </script>
-
 </body>
 </html>
