@@ -4,13 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuantumika</title>
+    <style>
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    width: 50vw;
+    height: 100vh;
+}
+
+.column {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card */
+.card {
+    width: 100%;
+    height: 40vh;       /* boleh diganti */
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Clone group untuk infinite smooth */
+.group.clone {
+    position: relative;
+}
+
+/* ---- ANIMASI NORMAL → UP ---- */
+@keyframes scrollUpSmooth {
+    from   { transform: translateY(0); }
+    to { transform: translateY(-100%); }
+}
+
+/* ---- ANIMASI NORMAL → DOWN ---- */
+@keyframes scrollDownSmooth {
+    from   { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+/* Terapkan animasi pada wrapper (bukan group) */
+.wrapper.up {
+    animation: scrollUpSmooth 30s linear infinite;
+}
+
+.wrapper.down {
+    animation: scrollDownSmooth 30s linear infinite;
+}
+
+
+    </style>
 </head>
 
 <body style="
     margin:0; 
     font-family:'Arial', sans-serif;
     background-color :#DEB887;
-    background-image: url('backgroundpattern.png'); 
+    background-image: url('newbackground.png'); 
     background-size: cover;
     background-repeat: no-repeat;
     color:#012f21;
@@ -71,12 +137,53 @@
         </button>
     </div>
 
-    <div style="width:35%; display:flex; flex-direction:column; gap:20px;">
-        <img src="logo.png" style="width:100%;  border-radius:20px; object-fit:contain;">
-        <img src="cv1.jpg" style="width:100%; border-radius:20px; object-fit:cover;">
-        <img src="cv2.jpg" style="width:100%; border-radius:20px; object-fit:cover;">
+    <div class="container">
+
+    <!-- Kolom kiri scroll ke bawah -->
+    <div class="column left">
+        <div class="wrapper down">
+            <div class="group">
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="apejelah.jpg"></div>
+            </div>
+
+            <!-- Clone untuk infinite scroll -->
+            <div class="group clone">
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="apejelah.jpg"></div>
+            </div>
+        </div>
     </div>
+
+
+    <!-- Kolom kanan scroll ke atas -->
+    <div class="column right">
+        <div class="wrapper up">
+            <div class="group">
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="apejelah.jpg"></div>
+            </div>
+
+            <!-- Clone untuk infinite scroll -->
+            <div class="group clone">
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="logo.png"></div>
+                <div class="card"><img src="apejelah.jpg"></div>
+            </div>
+        </div>
+    </div>
+
 </div>
+
+
+
 
 <script>
     const btn = document.getElementById("btnMulai");
